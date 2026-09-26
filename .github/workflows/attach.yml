@@ -14,10 +14,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: sekelan-ideas/Sangam-releases
-          APK_URL: https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/936121/github/GITHUB_DOWNLOAD_AN_ARTIFACT/response/718a58e05da9a3a30b33c70553343129?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=7685aa30fee07632b83ea58979a398d0%2F20260926%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260926T103131Z&X-Amz-Expires=3600&X-Amz-Signature=5f6380288471f2056a4b8efc5459ba1e9d012808068769e0dc05534ab4385ba8&X-Amz-SignedHeaders=host
+          APK_URL: https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/936121/github/GITHUB_DOWNLOAD_AN_ARTIFACT/response/d92d03949a6bda3eaafe6dc7b01df42f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=7685aa30fee07632b83ea58979a398d0%2F20260926%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260926T105456Z&X-Amz-Expires=3600&X-Amz-Signature=0b92e0f57f460296dd85d101355efc975a9bacf9a8d5d5f6088f2850945862b0&X-Amz-SignedHeaders=host
         run: |
           curl -sL "$APK_URL" -o apk.zip
           unzip -o apk.zip
-          sha256sum Sangam-v1.3.5.apk
-          gh release upload v1.3.5 Sangam-v1.3.5.apk --clobber
-          gh release view v1.3.5 --json assets -q '.assets[].name'
+          sha256sum Sangam-v1.4.0.apk
+          gh release upload v1.4.0 Sangam-v1.4.0.apk --clobber
+          gh release view v1.4.0 --json assets -q '.assets[].name'
