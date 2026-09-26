@@ -1,0 +1,23 @@
+name: Attach APK
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  attach:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download and attach APK
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: sekelan-ideas/Sangam-releases
+          APK_URL:  + APK_URL + 
+        run: |
+          curl -sL "$APK_URL" -o apk.zip
+          unzip -o apk.zip
+          sha256sum Sangam-v1.3.2.apk
+          gh release upload v1.3.2 Sangam-v1.3.2.apk --clobber
+          gh release view v1.3.2 --json assets -q '.assets[].name'
