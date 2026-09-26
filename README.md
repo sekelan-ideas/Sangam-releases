@@ -7,7 +7,7 @@
 
 # Sangam
 
-**Where friends meet**
+**Where friends and family meet**
 
 A private, end-to-end encrypted messenger built for the people you care about.
 
@@ -85,6 +85,6 @@ currently at **v1.9.1**.
   <img src="assets/sangam-logo.png" width="72" alt="Sangam logo">
 </picture>
 
-**Sangam** · Where friends meet
+**Sangam** · Where friends and family meet
 
 </div>
